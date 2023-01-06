@@ -8,7 +8,7 @@ const fetch = (...args) =>
 var requestOptions = {
 	method: "GET",
 	headers: {
-		"x-rapidapi-key": "2eeafea8379edba2af77907f4010b282",
+		"x-rapidapi-key": "8ea474ed8d5e143a9b74941ea336b09e",
 		"x-rapidapi-host": "v3.football.api-sports.io",
 	},
 	redirect: "follow",
@@ -16,7 +16,7 @@ var requestOptions = {
 app.use(
 	cors({
 		Credentials: true,
-		origin: ["http://localhost:3000"],
+		origin: ["http://localhost:3000",process.env.NETLIFY_URL],
 	})
 );
 app.listen(port);
